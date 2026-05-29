@@ -1,6 +1,6 @@
 package com.example.demo.ss12_b5_javaservice.aop;
 
-import com.example.demo.ss12_b5_javaservice.exception.StudentNotFoundException;
+import com.example.demo.ss12_b5_javaservice.exception.ProductNotFoundException;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.AfterThrowing;
@@ -30,7 +30,7 @@ public class LoggingAspect {
             throwing = "exception"
     )
     public void logServiceException(JoinPoint joinPoint, Throwable exception) {
-        if (exception instanceof StudentNotFoundException) {
+        if (exception instanceof ProductNotFoundException) {
             logger.warn("Service exception in {}: {}",
                     joinPoint.getSignature().getName(),
                     exception.getMessage());

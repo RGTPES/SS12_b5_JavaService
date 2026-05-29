@@ -1,6 +1,6 @@
 {
   "info": {
-    "name": "SS12 b5 JavaService - Student API",
+    "name": "SS12 b5 JavaService - Product API",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
   },
   "variable": [
@@ -11,14 +11,14 @@
   ],
   "item": [
     {
-      "name": "Get all students",
+      "name": "Get all products",
       "request": {
         "method": "GET",
-        "url": "{{baseUrl}}/api/students"
+        "url": "{{baseUrl}}/api/products"
       }
     },
     {
-      "name": "Create student",
+      "name": "Create product",
       "request": {
         "method": "POST",
         "header": [
@@ -29,20 +29,20 @@
         ],
         "body": {
           "mode": "raw",
-          "raw": "{\n  \"studentCode\": \"SV001\",\n  \"fullName\": \"Nguyen Van A\",\n  \"major\": \"Information Technology\",\n  \"gpa\": 3.4\n}"
+          "raw": "{\n  \"name\": \"Laptop\",\n  \"price\": 1500.0,\n  \"quantity\": 5\n}"
         },
-        "url": "{{baseUrl}}/api/students"
+        "url": "{{baseUrl}}/api/products"
       }
     },
     {
-      "name": "Get student by id",
+      "name": "Get product by id",
       "request": {
         "method": "GET",
-        "url": "{{baseUrl}}/api/students/1"
+        "url": "{{baseUrl}}/api/products/1"
       }
     },
     {
-      "name": "Update student",
+      "name": "Update product",
       "request": {
         "method": "PUT",
         "header": [
@@ -53,23 +53,23 @@
         ],
         "body": {
           "mode": "raw",
-          "raw": "{\n  \"studentCode\": \"SV001\",\n  \"fullName\": \"Nguyen Van A Updated\",\n  \"major\": \"Software Engineering\",\n  \"gpa\": 3.8\n}"
+          "raw": "{\n  \"name\": \"Gaming Laptop\",\n  \"price\": 1800.0,\n  \"quantity\": 3\n}"
         },
-        "url": "{{baseUrl}}/api/students/1"
+        "url": "{{baseUrl}}/api/products/1"
       }
     },
     {
-      "name": "Delete student",
+      "name": "Delete product",
       "request": {
         "method": "DELETE",
-        "url": "{{baseUrl}}/api/students/1"
+        "url": "{{baseUrl}}/api/products/1"
       }
     },
     {
-      "name": "Get missing student - 404",
+      "name": "Get missing product - 404",
       "request": {
         "method": "GET",
-        "url": "{{baseUrl}}/api/students/999"
+        "url": "{{baseUrl}}/api/products/999"
       }
     }
   ]
